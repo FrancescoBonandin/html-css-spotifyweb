@@ -34,27 +34,35 @@
     margin-bottom:100px;
 }
 
-#sidebar .col-menu.flex{
+#sidebar .col-menu{
     height: 100%;
 }
-
 
 #sidebar .col-menu.flex{
     flex-direction: column;
     justify-content: space-between;
+   
 }
 
-#sidebar .col-menu.flex .collapsible-menu{
-    min-height: 6rem;
+#sidebar .col-menu.flex .scroll{
+    flex-direction: column;
     overflow-y: auto;
+    min-height: none;
+    
+
+}
+
+
+
+#sidebar .col-menu.flex .scroll li{
+    flex-shrink: 0;
+    min-width: none;
 
 }
 
 #sidebar .col-menu.flex .profile{
-
+    flex-shrink: 0;
 }
-
-
 
 /* ASIDE */
 
