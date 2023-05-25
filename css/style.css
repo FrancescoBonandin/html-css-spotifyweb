@@ -1,49 +1,168 @@
-/* reset */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-/*-------*/
+/*HEADER*/
 
-/*----GENERAL----*/
-*{
-    font-family: Arial, Helvetica, sans-serif;
+#opaque-bar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+#opaque-bar a{
+   display: block;
+   position: absolute;
+   transform: translateY(-50%);
+   top: 50%;
+   right: 0;
 }
 
-.my-row{
-    display: flex;
+
+
+/*HEADER*/
+
+/* ASIDE */
+
+#sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+}
+
+#sidebar .container{
+    margin-bottom:150px;
+}
+
+
+
+/* ASIDE */
+
+/*MAIN*/
+
+
+.right-container{
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    
+}
+
+#full-content nav ul.flex{
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-bottom: 2rem;
+}
+
+#full-content nav ul.flex li{
+    margin: 0 1rem;
+}
+
+#full-content h2{
+    margin-bottom: 2rem;
+
+}
+
+#full-content .card-container.flex{
+    margin: 0 -1rem 0 -1rem;
+    width:calc(100% + 2rem);
+    align-items: flex-start;
     flex-wrap: wrap;
     
 }
 
+.gallery-menu{
 
-/*---------------*/
+    margin-bottom: 2rem;
+
+}
+
+.card{
+    width: calc(100% / 6 - 2rem);
+    margin: 1rem;
+
+}
+
+.card .img-container{
+    width: 100%;
+}
+
+.card .img-container img{
+    width: 100%;
+}
+
+
+/*MAIN*/
+
+/*FOOTER*/
+ #control-bar{
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    z-index: 1;
+    max-width: 100%;
+    /* min-width: 500px; */
+ }
+
+
+
+/*FOOTER*/
+
+/* RESPONSIVE  */
+
+/* METHOD DESKTOP FIRST */
+
+/* TABLET  */
+@media screen and (max-width:1100px) {
+    /*MAIN*/
+
+    .card{
+        width: calc(100% / 4 - 2rem);
+    }
+    /*MAIN*/
+}
+
+/* MOBILE L */
+@media screen and (max-width:700px) {
+    .card{
+        width: calc(100% / 2 - 2rem);
+    }
+}
+
+/* MOBILE S */
+@media screen and (max-width:600px) {
+    
+}
 
 /*-------DEBUG---------*/
 
 .debug{
 
     background-color: aqua;
-    border: 3px dashed red;
+    /* border: 3px dashed red; */
 }
 
 .debug header{
+
     background-color: goldenrod;
     border: 3px dotted green;
 }
 
+.debug aside{
+    background-color: lightcoral;
+    border: 3px dotted green;
+}
+
 .debug main{
+
+
     background-color: crimson;
     border: 3px solid blue;
 }
 
 .debug footer{
+    height: 150px;
     background-color: darkorange;
     border: 3px dashed blueviolet;
 }

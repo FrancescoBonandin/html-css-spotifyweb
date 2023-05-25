@@ -1,1 +1,1 @@
-# template
+# responsive-template
