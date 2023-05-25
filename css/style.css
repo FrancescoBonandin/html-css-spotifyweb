@@ -30,7 +30,28 @@
 }
 
 #sidebar .container{
-    margin-bottom:150px;
+    height: calc(100% - 100px);
+    margin-bottom:100px;
+}
+
+#sidebar .col-menu.flex{
+    height: 100%;
+}
+
+
+#sidebar .col-menu.flex{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sidebar .col-menu.flex .collapsible-menu{
+    min-height: 6rem;
+    overflow-y: auto;
+
+}
+
+#sidebar .col-menu.flex .profile{
+
 }
 
 
@@ -98,11 +119,20 @@
     position: sticky;
     left: 0;
     bottom: 0;
-    height: 10vh;
+    height: 100px;
     width: 100%;
     z-index: 1;
     max-width: 100%;
     /* min-width: 500px; */
+ }
+
+ #control-bar .controls-container.flex{
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .inline-block{
+    display: inline-block;
  }
 
 
