@@ -6,16 +6,10 @@
     top: 0;
     left: 0;
     right: 0;
-
+    text-align: right;
 }
 
-#opaque-bar a{
-   display: block;
-   position: absolute;
-   transform: translateY(-50%);
-   top: 50%;
-   right: 0;
-}
+
 
 
 
@@ -72,11 +66,16 @@
 
 /*MAIN*/
 
+#full-content{
+    align-items: flex-start;
+}
+
 
 .right-container{
     margin-left: 250px;
     width: calc(100% - 250px);
-    min-height: 100vh;
+    height:calc(100vh - 100px);
+    overflow-y: auto;
     
 }
 
@@ -98,7 +97,7 @@
 
 #full-content .card-container.flex{
     margin: 0 -1rem 0 -1rem;
-    width:calc(100% + 2rem);
+    width:calc(100% - 2rem);
     align-items: flex-start;
     flex-wrap: wrap;
     
@@ -138,18 +137,61 @@
     height: 100px;
     width: 100%;
     z-index: 1;
-    max-width: 100%;
-    /* min-width: 500px; */
+   
  }
 
- #control-bar .controls-container.flex{
+ #control-bar .toolbox.flex{
     justify-content: space-between;
     align-items: center;
+    align-content: center;
  }
 
- .inline-block{
-    display: inline-block;
+ #control-bar .left.flex,  #control-bar .center.flex,  #control-bar .right.flex{
+    width: calc(100% / 3);
+
  }
+
+ #control-bar .center.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+ }
+
+ #control-bar .center.flex > *{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+ }
+
+
+ .commands-panel .commands-panel .commands{
+
+
+ }
+
+
+ #control-bar .right.flex{
+    justify-content: flex-end;
+ }
+
+ #control-bar .left.info-panel .img-container{
+    width: 10%;
+
+ }
+
+ #control-bar .left.info-panel .img-container img{
+    width: 100%;
+    object-fit: scale-down;
+    display: block;
+ }
+
+ #control-bar .left.info-panel .artist{
+    color: grey;
+ }
+
+
 
 
 
