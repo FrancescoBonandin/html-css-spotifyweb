@@ -87,8 +87,15 @@
     margin-left: 250px;
     width: calc(100% - 250px);
     height:calc(100vh - 100px);
-    overflow-y: auto;
-    
+    overflow-y: auto;  
+}
+
+.right-container .container{
+    color: var(--font-2);
+}
+
+.right-container .container .gallery-menu h2, .right-container .container .gallery-menu h3{
+    color: var(--font-1);
 }
 
 #full-content nav ul.flex{
@@ -116,7 +123,6 @@
 }
 
 .gallery-menu{
-
     margin-bottom: 2rem;
 
 }
@@ -189,8 +195,14 @@
 
 }
 
-#control-bar .left.info-panel .favourites > *{
+#control-bar .left.info-panel .song-info > *{
+    color: var(--font-2);
 
+
+}
+
+#control-bar .left.info-panel .favourites > *{
+    color: var(--font-2);
     margin: 0 0.5rem;
 
 }
