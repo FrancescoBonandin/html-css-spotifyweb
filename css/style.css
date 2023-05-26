@@ -134,7 +134,7 @@
 /*MAIN*/
 
 /*FOOTER*/
- #control-bar{
+#control-bar{
     position: sticky;
     left: 0;
     bottom: 0;
@@ -142,126 +142,158 @@
     width: 100%;
     z-index: 1;
     background-color: var(--footer-bg);
- }
+    color: var(--font-1);
+}
 
- #control-bar .toolbox.flex{
+#control-bar .toolbox.flex{
     justify-content: space-between;
     align-items: center;
     align-content: center;
- }
+}
 
- #control-bar .left.flex,  #control-bar .center.flex,  #control-bar .right.flex{
+#control-bar .left.flex,  #control-bar .center.flex,  #control-bar .right.flex{
     width: calc(100% / 3);
 
- }
+}
 
  
  
- #control-bar .right.flex{
-     justify-content: flex-end;
-    }
+ 
+#control-bar .left.info-panel {
+    align-items: center;
     
-    #control-bar .left.info-panel .img-container{
-        width: 10%;
-        
-    }
+}
+
+#control-bar .left.info-panel .img-container{
+    width: 4rem;
     
-    #control-bar .left.info-panel .img-container img{
-        width: 100%;
-        object-fit: scale-down;
-        display: block;
-    }
+}
+
+#control-bar .left.info-panel .img-container img{
+    width: 100%;
+    object-fit: scale-down;
+    display: block;
+}
+
+#control-bar .left.info-panel .song-info, #control-bar .left.info-panel .song-title, #control-bar .left.info-panel .favourites{
+    flex-wrap: wrap;
+    margin: 0 0.5rem;
+
+}
+
+#control-bar .left.info-panel .favourites > *{
+
+    margin: 0 0.5rem;
+
+}
+
+#control-bar .center.flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     
-    #control-bar .left.info-panel .artist{
-        color: grey;
-    }
+}
+
+#control-bar .center.flex > *{
+    display: flex;
+    justify-content: space-between;
     
-    #control-bar .center.flex{
-       display: flex;
-       justify-content: space-between;
-       flex-wrap: wrap;
-   
-    }
-   
-    #control-bar .center.flex > *{
-       display: flex;
-       justify-content: space-between;
-   
-    }
+}
 
-    #control-bar .center.flex > .commands{
-        width: 100%;
-   
-    }
-
-    #control-bar .center.flex > .playing-state{
-        width: 100%;
-        align-items: center;
-    }
-
-    #control-bar .center.flex > .playing-state .bg-bar{
-        width: 80%;
-        background-color:var(--bg-color) ;
-        height: 0.3rem;
-        border-radius: 0.15rem;
-     
-    }
-
-    #control-bar .center.flex > .playing-state .color-bar{
-        width: 20%;
-        background-color:var(--progress-color) ;
-        height: 0.3rem;
-        border-radius: 0.15rem;
-        position: relative;
-    }
-
-    #control-bar .center.flex > .playing-state .round{
-        background-color:var(--progress-color) ;
-        height: 0.5rem;
-        width: 0.5rem;
-        border-radius: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 100%;
-    }
-   
-   
-    .commands-panel .commands-panel .commands{
-   
-   
-    }
-
-    #control-bar .right.flex .volume{
-        width: 40%;
-    }
-
-    #control-bar .right.flex .bg-bar{
-        width: 80%;
-        background-color:var(--bg-color) ;
-        height: 0.3rem;
-        border-radius: 0.15rem;
-     
-    }
-
-    #control-bar .right.flex .color-bar{
-        width: 20%;
-        background-color:var(--progress-color) ;
-        height: 0.3rem;
-        border-radius: 0.15rem;
-        position: relative;
-    }
+#control-bar .center.flex > .commands{
+    width: 300px;
+    align-items: center;
     
-    #control-bar .right.flex .round{
-        background-color:var(--progress-color) ;
-        height: 0.5rem;
-        width: 0.5rem;
-        border-radius: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 100%;
-    }
+}
+
+#control-bar .center.flex > .commands > *:nth-child(4n + 1) {
+    font-size: 1rem;
+}
+
+#control-bar .center.flex > .commands > *:nth-child(even) {
+    font-size: 1.5rem;
+}
+
+#control-bar .center.flex > .commands > *:nth-child(3) {
+    font-size: 2rem;
+}
+
+#control-bar .center.flex > .playing-state{
+    width: 100%;
+    align-items: center;
+}
+
+#control-bar .center.flex > .playing-state span{
+    font-size: 0.7rem;
+}
+
+#control-bar .center.flex > .playing-state .bg-bar{
+    width: 80%;
+    background-color:var(--bg-color) ;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    
+}
+
+#control-bar .center.flex > .playing-state .color-bar{
+    width: 20%;
+    background-color:var(--progress-color) ;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    position: relative;
+}
+
+#control-bar .center.flex > .playing-state .round{
+    background-color:var(--progress-color) ;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 100%;
+}
+
+
+#control-bar .right.flex{
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#control-bar .right.flex > i{
+    margin:0 0.5rem ;
+}
+
+#control-bar .right.flex .volume{
+    width: 40%;
+}
+
+#control-bar .right.flex .bg-bar{
+    width: 80%;
+    background-color:var(--bg-color) ;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    
+}
+
+#control-bar .right.flex .color-bar{
+    width: 20%;
+    background-color:var(--progress-color) ;
+    height: 0.3rem;
+    border-radius: 0.15rem;
+    position: relative;
+}
+
+#control-bar .right.flex .round{
+    background-color:var(--progress-color) ;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 100%;
+}
 
 
 
