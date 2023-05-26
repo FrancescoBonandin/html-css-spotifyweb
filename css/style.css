@@ -34,6 +34,7 @@
     height: calc(100vh - 100px);
     width: 250px;
     background-color: var(--sidebar-bg);
+    color: var(--font-2);
 }
 
 #sidebar .container{
@@ -44,6 +45,19 @@
     height: 100%;
     justify-content: flex-start;
     flex-direction: column;
+}
+
+#sidebar .img-container{
+    width: 2rem;
+}
+
+#sidebar .img-container img{
+    width: 100%;
+    object-fit: scale-down;
+}
+
+#sidebar .icons-list > li *{
+    display: inline-block;
 }
 
 #sidebar .col-menu.flex .collapsible-menu{
@@ -60,15 +74,20 @@
     height: calc(2rem + (2rem / 100 * 20))
 
 }
-#sidebar .col-menu.flex .collapsible-menu .scroll li{
- padding-left: 1rem;
+
+
+
+#sidebar .col-menu.flex .collapsible-menu .scroll .special-li *{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #sidebar .col-menu.flex .profile{
     flex-shrink: 0;
+}
 
-   
-
+#sidebar .col-menu.flex .profile > div .img-container{
+    
 }
 
 
