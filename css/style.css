@@ -11,6 +11,14 @@
     opacity: 0.5;
 }
 
+#opaque-bar .button{
+    padding: 1rem 2rem;
+    border-radius: 1.65rem;
+    color: var(--font-1);
+    border: calc(1rem / 16) solid var(--font-1);
+    display: inline-block;
+}
+
 
 
 
