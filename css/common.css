@@ -3,6 +3,11 @@
     font-family:  'Montserrat', Arial, Helvetica, sans-serif;
 }
 
+a, a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
 ul{
     list-style: none;
 }

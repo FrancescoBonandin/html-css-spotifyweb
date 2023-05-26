@@ -7,6 +7,8 @@
     left: 0;
     right: 0;
     text-align: right;
+    background-color: var(--header-bg);
+    opacity: 0.5;
 }
 
 
@@ -23,6 +25,7 @@
     top: 0;
     height: calc(100vh - 100px);
     width: 250px;
+    background-color: var(--sidebar-bg);
 }
 
 #sidebar .container{
@@ -68,6 +71,7 @@
 
 #full-content{
     align-items: flex-start;
+    background-color: var(--main-bg);
 }
 
 
@@ -137,7 +141,7 @@
     height: 100px;
     width: 100%;
     z-index: 1;
-   
+    background-color: var(--footer-bg);
  }
 
  #control-bar .toolbox.flex{
@@ -151,46 +155,113 @@
 
  }
 
- #control-bar .center.flex{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
- }
-
- #control-bar .center.flex > *{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
- }
-
-
- .commands-panel .commands-panel .commands{
-
-
- }
-
-
+ 
+ 
  #control-bar .right.flex{
-    justify-content: flex-end;
- }
+     justify-content: flex-end;
+    }
+    
+    #control-bar .left.info-panel .img-container{
+        width: 10%;
+        
+    }
+    
+    #control-bar .left.info-panel .img-container img{
+        width: 100%;
+        object-fit: scale-down;
+        display: block;
+    }
+    
+    #control-bar .left.info-panel .artist{
+        color: grey;
+    }
+    
+    #control-bar .center.flex{
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+   
+    }
+   
+    #control-bar .center.flex > *{
+       display: flex;
+       justify-content: space-between;
+   
+    }
 
- #control-bar .left.info-panel .img-container{
-    width: 10%;
+    #control-bar .center.flex > .commands{
+        width: 100%;
+   
+    }
 
- }
+    #control-bar .center.flex > .playing-state{
+        width: 100%;
+        align-items: center;
+    }
 
- #control-bar .left.info-panel .img-container img{
-    width: 100%;
-    object-fit: scale-down;
-    display: block;
- }
+    #control-bar .center.flex > .playing-state .bg-bar{
+        width: 80%;
+        background-color:var(--bg-color) ;
+        height: 0.3rem;
+        border-radius: 0.15rem;
+     
+    }
 
- #control-bar .left.info-panel .artist{
-    color: grey;
- }
+    #control-bar .center.flex > .playing-state .color-bar{
+        width: 20%;
+        background-color:var(--progress-color) ;
+        height: 0.3rem;
+        border-radius: 0.15rem;
+        position: relative;
+    }
 
+    #control-bar .center.flex > .playing-state .round{
+        background-color:var(--progress-color) ;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 100%;
+    }
+   
+   
+    .commands-panel .commands-panel .commands{
+   
+   
+    }
+
+    #control-bar .right.flex .volume{
+        width: 40%;
+    }
+
+    #control-bar .right.flex .bg-bar{
+        width: 80%;
+        background-color:var(--bg-color) ;
+        height: 0.3rem;
+        border-radius: 0.15rem;
+     
+    }
+
+    #control-bar .right.flex .color-bar{
+        width: 20%;
+        background-color:var(--progress-color) ;
+        height: 0.3rem;
+        border-radius: 0.15rem;
+        position: relative;
+    }
+    
+    #control-bar .right.flex .round{
+        background-color:var(--progress-color) ;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 100%;
+    }
 
 
 
