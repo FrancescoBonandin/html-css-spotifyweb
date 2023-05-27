@@ -172,6 +172,10 @@
 
 }
 
+.card > *{
+    margin-bottom: 0.8rem;
+}
+
 .card .img-container{
     width: 100%;
 }
@@ -205,11 +209,7 @@
 
 #control-bar .left.flex,  #control-bar .center.flex,  #control-bar .right.flex{
     width: calc(100% / 3);
-
 }
-
- 
- 
  
 #control-bar .left.info-panel {
     align-items: center;
@@ -235,8 +235,11 @@
 
 #control-bar .left.info-panel .song-info > *{
     color: var(--font-2);
+}
 
-
+#control-bar .left.info-panel .song-info .album::after{
+    display: inline;
+    content: " ";
 }
 
 #control-bar .left.info-panel .favourites > *{
