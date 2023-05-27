@@ -37,6 +37,10 @@
     color: var(--font-2);
 }
 
+#sidebar .col-menu.flex > *, #sidebar .col-menu.flex li{
+    margin-bottom: 1rem;
+}
+
 #sidebar .container{
     height: 100%
 }
@@ -72,6 +76,7 @@
 
 #sidebar .icons-list > li *{
     display: inline-block;
+    vertical-align: middle;
 }
 
 #sidebar .col-menu.flex .collapsible-menu{
