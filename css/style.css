@@ -28,11 +28,11 @@
 /* ASIDE */
 
 #sidebar{
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     height: calc(100vh - 100px);
-    width: 250px;
+    min-width: 250px;
     background-color: var(--sidebar-bg);
     color: var(--font-2);
 }
@@ -45,6 +45,20 @@
     height: 100%;
     justify-content: flex-start;
     flex-direction: column;
+}
+
+#sidebar .logo-container{
+    width: 100%;
+}
+
+#sidebar .logo-container img{
+    width: 100%;
+    object-fit: scale-down;
+}
+
+#sidebar .logo-container img[src="img/logo-small.svg"]{
+    width: 100%;
+    display: none;
 }
 
 #sidebar .img-container{
@@ -75,8 +89,6 @@
 
 }
 
-
-
 #sidebar .col-menu.flex .collapsible-menu .scroll .special-li *{
     display: inline-block;
     vertical-align: middle;
@@ -86,11 +98,15 @@
     flex-shrink: 0;
 }
 
-#sidebar .col-menu.flex .profile > div .img-container{
-    
+#sidebar .col-menu.flex .profile > div.top-profile > *, #sidebar .col-menu.flex .profile > div.bottom-profile > *{
+    display: inline-block;
+    vertical-align: middle;
 }
 
+#sidebar .col-menu.flex .profile > div.top-profile{
+    border-bottom: calc(1rem / 16) solid var(--font-1);
 
+}
 
 /* ASIDE */
 
@@ -103,8 +119,6 @@
 
 
 .right-container{
-    margin-left: 250px;
-    width: calc(100% - 250px);
     height:calc(100vh - 100px);
     overflow-y: auto;  
 }
@@ -362,37 +376,37 @@
 
 /* MOBILE S */
 @media screen and (max-width:600px) {
+    #sidebar{
+        min-width: 80px;
+    }
+
+    #sidebar *{
+        margin: 0 auto;
+    }
+
+    #sidebar .logo-container {
+        width: 100%;
+    }
+
+    #sidebar .logo-container img[src="img/logo.svg"]{
+        display: none;
+    }
+
+    #sidebar .logo-container img[src="img/logo-small.svg"]{
+        width: 100%;
+        display: block;
+    }
+
+    #sidebar .col-menu.flex .collapsible-menu .scroll{
+        overflow-y: hidden;
+        opacity: 0;
+
+    }
+
+    #sidebar .col-menu.flex h3, #sidebar .icons-list li .img-container + div, #sidebar .col-menu.flex .profile .img-container + div {
+        display: none;
+        border: 0;
+    }
     
 }
 
-/*-------DEBUG---------*/
-
-.debug{
-
-    background-color: aqua;
-    /* border: 3px dashed red; */
-}
-
-.debug header{
-
-    background-color: goldenrod;
-    border: 3px dotted green;
-}
-
-.debug aside{
-    background-color: lightcoral;
-    border: 3px dotted green;
-}
-
-.debug main{
-
-
-    background-color: crimson;
-    border: 3px solid blue;
-}
-
-.debug footer{
-    height: 150px;
-    background-color: darkorange;
-    border: 3px dashed blueviolet;
-}
