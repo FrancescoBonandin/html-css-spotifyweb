@@ -1,0 +1,74 @@
+/* HOVERS */
+/* SIDEBAR */
+#sidebar li:hover *{
+    color: var(--font-1);
+}
+
+#sidebar .icons-list li:hover{
+    border-left: 0.3rem solid var(--hover-color);
+}
+
+#sidebar .profile .top-profile:hover {
+    color: var(--font-1);
+}
+/* SIDEBAR */
+
+
+/* HEADER */
+#opaque-bar a:hover .button{
+    transform: scale(1.1);
+}
+
+/* HEADER */
+
+/* MAIN */
+
+#full-content .right-container .container nav ul.flex li a:hover + hr {
+    opacity: 1;
+}
+
+.card .img-container:hover .overlay {
+  display: block;
+}
+
+.card .img-container:hover i{
+    display: block;
+}
+/* MAIN */
+
+
+/* FOOTER */
+
+#control-bar .left.info-panel .song-info .album:hover, #control-bar .left.info-panel .song-info .artist:hover{
+    text-decoration: underline;
+}
+
+
+#control-bar .left.info-panel .favourites > *:hover{
+    color: var(--font-1);
+}
+
+#control-bar .center.commands-panel .commands > *:hover{
+    transform: scale(1.2);
+}
+
+#control-bar .center.commands-panel .playing-state > .bg-bar:hover .color-bar{
+    background-color: var(--hover-color);
+}
+
+#control-bar .center.commands-panel .playing-state > .bg-bar:hover .round{
+    display: block;
+}
+
+
+#control-bar .right.flex .bg-bar:hover .color-bar{
+    background-color: var(--hover-color);
+}
+
+#control-bar .right.flex .bg-bar:hover .round{
+    display: block;
+}
+
+
+
+/* FOOTER */

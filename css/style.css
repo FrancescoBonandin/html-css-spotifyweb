@@ -8,7 +8,7 @@
     right: 0;
     text-align: right;
     background-color: var(--header-bg);
-    opacity: 0.5;
+    z-index: 1;
 }
 
 #opaque-bar .button{
@@ -35,6 +35,7 @@
     min-width: 250px;
     background-color: var(--sidebar-bg);
     color: var(--font-2);
+    z-index: 1;
 }
 
 #sidebar .col-menu.flex > *, #sidebar .col-menu.flex li{
@@ -71,7 +72,12 @@
 
 #sidebar .img-container img{
     width: 100%;
-    object-fit: scale-down;
+    aspect-ratio: 1;
+    display: block;
+}
+
+#sidebar .icons-list li{
+    border-left: 0.3rem solid transparent;
 }
 
 #sidebar .icons-list > li *{
@@ -110,6 +116,15 @@
 
 #sidebar .col-menu.flex .profile > div.top-profile{
     border-bottom: calc(1rem / 16) solid var(--font-1);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#sidebar .col-menu.flex .profile > div.bottom-profile .img-container {
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 50% solid var(--sidebar-bg);
+    overflow: hidden;
 
 }
 
@@ -125,11 +140,12 @@
 
 .right-container{
     height:calc(100vh - 100px);
-    overflow-y: auto;  
 }
 
 .right-container .container{
     color: var(--font-2);
+    height: 100%;
+    overflow: auto;
 }
 
 .right-container .container .gallery-menu h2, .right-container .container .gallery-menu h3{
@@ -145,6 +161,17 @@
 
 #full-content nav ul.flex li{
     margin: 0 1rem;
+
+}
+
+#full-content nav ul.flex li hr{
+    position: relative;
+    top: 0.3rem;
+    opacity: 0;
+    width: 3rem;
+    border:0;
+    border-bottom: 0.2rem solid var(--hover-color);
+    margin: 0 auto;
 }
 
 #full-content h2{
@@ -178,12 +205,35 @@
 
 .card .img-container{
     width: 100%;
+    position: relative;
 }
 
 .card .img-container img{
     max-width: 100%;
     object-fit: scale-down;
     aspect-ratio: 1;
+    display: block;
+}
+
+.card .img-container .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.card .img-container i{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    color: white;
+    font-size: 5rem;
 }
 
 
@@ -305,9 +355,10 @@
 }
 
 #control-bar .center.flex > .playing-state .round{
+    display: none;
     background-color:var(--progress-color) ;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.8rem;
+    width: 0.8rem;
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -334,7 +385,6 @@
     background-color:var(--bg-color) ;
     height: 0.3rem;
     border-radius: 0.15rem;
-    
 }
 
 #control-bar .right.flex .color-bar{
@@ -346,9 +396,10 @@
 }
 
 #control-bar .right.flex .round{
+    display: none;
     background-color:var(--progress-color) ;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.8rem;
+    width: 0.8rem;
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
