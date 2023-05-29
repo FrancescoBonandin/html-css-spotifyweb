@@ -36,6 +36,7 @@
     background-color: var(--sidebar-bg);
     color: var(--font-2);
     z-index: 1;
+    overflow: hidden;
 }
 
 #sidebar .col-menu.flex > *, #sidebar .col-menu.flex li{
