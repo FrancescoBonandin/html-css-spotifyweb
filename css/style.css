@@ -87,7 +87,6 @@
 
 #sidebar .col-menu.flex .collapsible-menu{
     height: 100%;
-
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
@@ -97,7 +96,6 @@
     overflow-y: auto;
     flex-grow: 1;
     height: calc(2rem + (2rem / 100 * 20))
-
 }
 
 #sidebar .col-menu.flex .collapsible-menu .scroll .special-li *{
@@ -144,7 +142,7 @@
 
 .right-container .container{
     color: var(--font-2);
-    height: 100%;
+    height: calc(100% - 100px + 1rem);
     overflow: auto;
 }
 
@@ -155,13 +153,11 @@
 #full-content nav ul.flex{
     justify-content: center;
     flex-wrap: wrap;
-
     margin-bottom: 2rem;
 }
 
 #full-content nav ul.flex li{
     margin: 0 1rem;
-
 }
 
 #full-content nav ul.flex li hr{
@@ -176,7 +172,6 @@
 
 #full-content h2{
     margin-bottom: 2rem;
-
 }
 
 #full-content .card-container.flex{
@@ -184,19 +179,16 @@
     width:calc(100% - 2rem);
     align-items: flex-start;
     flex-wrap: wrap;
-    
 }
 
 .gallery-menu{
     margin-bottom: 2rem;
-
 }
 
 .card{
     width: calc(100% / 6 - 2rem);
     margin: 1rem;
     text-align: center;
-
 }
 
 .card > *{
@@ -263,12 +255,10 @@
  
 #control-bar .left.info-panel {
     align-items: center;
-    
 }
 
 #control-bar .left.info-panel .img-container{
     width: 4rem;
-    
 }
 
 #control-bar .left.info-panel .img-container img{
@@ -280,7 +270,6 @@
 #control-bar .left.info-panel .song-info, #control-bar .left.info-panel .song-title, #control-bar .left.info-panel .favourites{
     flex-wrap: wrap;
     margin: 0 0.5rem;
-
 }
 
 #control-bar .left.info-panel .song-info > *{
@@ -295,26 +284,22 @@
 #control-bar .left.info-panel .favourites > *{
     color: var(--font-2);
     margin: 0 0.5rem;
-
 }
 
 #control-bar .center.flex{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 #control-bar .center.flex > *{
     display: flex;
     justify-content: space-between;
-    
 }
 
 #control-bar .center.flex > .commands{
     width: 300px;
     align-items: center;
-    
 }
 
 #control-bar .center.flex > .commands > *:nth-child(4n + 1) {
@@ -343,10 +328,9 @@
     background-color:var(--bg-color) ;
     height: 0.3rem;
     border-radius: 0.15rem;
-    
 }
 
-#control-bar .center.flex > .playing-state .color-bar{
+#control-bar .color-bar{
     width: 20%;
     background-color:var(--progress-color) ;
     height: 0.3rem;
@@ -354,7 +338,7 @@
     position: relative;
 }
 
-#control-bar .center.flex > .playing-state .round{
+#control-bar .round{
     display: none;
     background-color:var(--progress-color) ;
     height: 0.8rem;
@@ -387,28 +371,6 @@
     border-radius: 0.15rem;
 }
 
-#control-bar .right.flex .color-bar{
-    width: 20%;
-    background-color:var(--progress-color) ;
-    height: 0.3rem;
-    border-radius: 0.15rem;
-    position: relative;
-}
-
-#control-bar .right.flex .round{
-    display: none;
-    background-color:var(--progress-color) ;
-    height: 0.8rem;
-    width: 0.8rem;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 100%;
-}
-
-
-
 
 /*FOOTER*/
 
@@ -428,13 +390,18 @@
 
 /* MOBILE L */
 @media screen and (max-width:700px) {
+
+    /* MAIN */
     .card{
         width: calc(100% / 2 - 2rem);
     }
+    /* MAIN */
 }
 
 /* MOBILE S */
 @media screen and (max-width:600px) {
+
+    /* SIDEBAR */
     #sidebar{
         min-width: 80px;
     }
@@ -466,6 +433,7 @@
         display: none;
         border: 0;
     }
+    /* SIDEBAR */
     
 }
 
